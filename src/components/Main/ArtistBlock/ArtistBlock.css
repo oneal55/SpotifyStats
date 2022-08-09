@@ -1,0 +1,15 @@
+.TypeBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    margin: auto;
+    display: inline-block;
+    width: 65%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
