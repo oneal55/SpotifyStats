@@ -10,9 +10,13 @@ const Login = (props) => {
   };
 
   return (
-    <div className="Login">
-      <Button text="Login Here" styles="py-2 px-4" onClick={authenticate} />
+    <div className="container">
+        <h1 className="text-white text-6xl text-bold title">Spotify Stats</h1>
+        <div className="logIn">
+          <Button text="Login Here" styles="py-2 px-4" onClick={authenticate} />
+        </div>
     </div>
+    
   );
 };
 

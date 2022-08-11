@@ -1,8 +1,45 @@
-.Login{
+@keyframes loadInSlideTop {
+  from {
+    transform: translateY(0%);
+    top: 0%;
+  }
+  to {
+    transform: translateY(-50%);
+    top: 50%;
+  }
+
+}
+
+@keyframes loadInSlideBottom{
+  from {
+    top: 100%;
+  }
+  to {
+    top: 50%;
+  }
+
+}
+
+.container {
   position: relative;
-  display: flex;
+  display: inline-block;
   width: 100%;
-  height: 90%;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+}
+
+.title {
+  position: relative;
+  display: block;
+  transform: translateY(-50%);
+  top: 50%;
+  animation: loadInSlideTop 1s ease-in-out 0s;
+}
+
+.logIn {
+  margin: auto;
+  position: relative;
+  display: block;
+  transform: translateY(-50%);
+  top: 50%;
+  animation: loadInSlideBottom 1s ease-in-out 0s;
 }

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Login from "./components/Login/Login.js";
 import Main from "./components/Main/Main.js";
-import TitleBar from "./components/TitleBar/TitleBar.js";
 
 export default function App() {
   const url = window.location.hash;
@@ -62,9 +61,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <TitleBar user={user} logOut={logOut} />
       {user ? (
-        <Main accessToken={user} />
+        <Main accessToken={user} logOut={logOut}/>
       ) : (
         <Login userAuth={AUTH_URL} setUser={setUser} />
       )}
