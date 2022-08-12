@@ -42,7 +42,7 @@ export default function App() {
   const state = generateRandomString();
   const client_id = "4f3cd9dfe9714762acbbbd97b623ca35";
   const response_type = "token";
-  const redirect_uri = "http://localhost:3000";
+  const redirect_uri = "https://oneal55.github.io/SpotifyStats/";
   const perms = ["user-top-read"];
 
   let AUTH_URL = baseURL;
