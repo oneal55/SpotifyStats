@@ -35,14 +35,14 @@ export default function App() {
   };
 
   const logOut = () => {
-    window.location.href = "https://oneal55.github.io/SpotifyStats/";
+    setUser(undefined);
   };
 
   const baseURL = "https://accounts.spotify.com/authorize?";
   const state = generateRandomString();
   const client_id = "4f3cd9dfe9714762acbbbd97b623ca35";
   const response_type = "token";
-  const redirect_uri = "https://oneal55.github.io/SpotifyStats/";
+  const redirect_uri = window.location.href;
   const perms = ["user-top-read"];
 
   let AUTH_URL = baseURL;
