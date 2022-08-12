@@ -38,11 +38,13 @@ export default function App() {
     setUser(undefined);
   };
 
+  console.log(window.location.href);
+
   const baseURL = "https://accounts.spotify.com/authorize?";
   const state = generateRandomString();
   const client_id = "4f3cd9dfe9714762acbbbd97b623ca35";
   const response_type = "token";
-  const redirect_uri = window.location.href;
+  const redirect_uri = window.location.href.substr(0, window.location.href.length - 1);
   const perms = ["user-top-read"];
 
   let AUTH_URL = baseURL;
