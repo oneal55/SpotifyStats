@@ -26,13 +26,10 @@ const Genres = (props) => {
 
     const [info, setInfo] = useState(undefined);
     const [rawData, setrawData] = useState([]);
-    const [term, setTerm] = useState('long_term');
-    
-    const terms = ['short_term', 'medium_term', 'long_term'];
 
     async function getAllInfo(offsetAmount) {
         const endPoint =
-          "https://api.spotify.com/v1/me/top/artists?offset=" + offsetAmount + "&limit=100&time_range=" + term;
+          "https://api.spotify.com/v1/me/top/artists?offset=" + offsetAmount + "&limit=100&time_range=" + props.time;
         fetch(endPoint, {
           headers: {
             Authorization: "Bearer " + props.user,
@@ -135,14 +132,21 @@ const Genres = (props) => {
 
     useEffect(() => {
         setrawData([]);
-        getAllInfo(0);
-    }, []);
+    }, [props.time]);
 
     useEffect(() => {
+        if (rawData.length == 0) {
+            getAllInfo(0);
+            
+        }
+    }, [rawData]);
 
-        const newInfo = splitInfoObjectIntoArray(turnInfoIntoObject(rawData));
-        console.log(newInfo);
-        setInfo(newInfo);
+    useEffect(() => {
+        if (rawData.length > 0) {
+            const newInfo = splitInfoObjectIntoArray(turnInfoIntoObject(rawData));
+            setInfo(newInfo);
+        }
+        
     }, [rawData]);
 
     return (

@@ -4,14 +4,11 @@ import ArtistBlock from "./ArtistBlock/ArtistBlock";
 import Spinner from "../Spinner/Spinner";
 
 const Artists = (props) => {
-    const [term, setTerm] = useState('short_term');
     const [info, setInfo] = useState([]);
-    
-    const terms = ['short_term', 'medium_term', 'long_term'];
 
-    useEffect(() => {
+    const search = () => {
         const endPoint =
-          "https://api.spotify.com/v1/me/top/artists?limit=24&time_range=" + term;
+          "https://api.spotify.com/v1/me/top/artists?limit=24&time_range=" + props.time;
         fetch(endPoint, {
           headers: {
             Authorization: "Bearer " + props.user,
@@ -19,9 +16,9 @@ const Artists = (props) => {
         }).then(response => response.json())
         .then(data => data["items"])
         .then(items => setInfo(items));
-        }, []);
+      }
 
-
+      useEffect(() => search(), [props.time]);
 
     return (
         <div className="Artists my-8">

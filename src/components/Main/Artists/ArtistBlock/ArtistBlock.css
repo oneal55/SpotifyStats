@@ -1,12 +1,12 @@
 .artistBlock {
     position: relative;
     display: inline-block;
-    width: 25%;
-    height: 30vh;
+    width: 27vh;
+    height: 40vh;
     background-color: gray;
     justify-content: left;
     margin: 1.5%;
-    font-size: 1.5vw;
+    font-size: 1vw;
     transition: font-size .5s, width .5s, height .5s;
     overflow: scroll;
     border-radius: 5px;
@@ -16,8 +16,8 @@
 .artistBlock > img{
     display: inline-block;
     position: relative;
-    height: 17vh;
-    width: 17vh;
+    height: 22vh;
+    width: 22vh;
     margin-top: 10%;
     margin-bottom: 5%;
     object-fit: cover;
@@ -26,9 +26,9 @@
 }
 
 .artistBlock:hover{
-    width: 30%;
-    height: 37vh;
-    font-size: 2vw;
+    width: 30vh;
+    height: 45vh;
+    font-size: 1.5vw;
     background-color: rgba(255, 255, 255, .6);
     transition: background-color .5s, font-size .5s, width .5s, height .5s;
     cursor: pointer;
@@ -36,8 +36,8 @@
 }
 
 .artistBlock:hover > img {
-    width: 20.4vh;
-    height: 20.4vh;
+    width: 25vh;
+    height: 25vh;
     transition: width .5s, height .5s;
 }
 

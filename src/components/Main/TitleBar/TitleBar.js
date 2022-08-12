@@ -11,7 +11,7 @@ const TitleBar = (props) => {
             <strong>Spotify Stats</strong>
           </span>
           <span className="logOut">
-            <Button text="Log Out" styles="py-2 px-4" onClick={props.logOut} />
+            <Button text="Log Out" styles="py-4 px-6" onClick={props.logOut} />
           </span>
         </h1>
     </div>
