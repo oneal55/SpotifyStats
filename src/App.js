@@ -35,7 +35,7 @@ export default function App() {
   };
 
   const logOut = () => {
-    window.location.href = "http://localhost:3000";
+    window.location.href = "https://oneal55.github.io/SpotifyStats/";
   };
 
   const baseURL = "https://accounts.spotify.com/authorize?";
