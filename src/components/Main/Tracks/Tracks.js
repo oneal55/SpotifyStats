@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Tracks.css"
-
+import TrackBlock from "./TrackBlock/TrackBlock";
+import { data } from "autoprefixer";
 
 const Tracks = (props) => {
     const [expanded, setExpanded] = useState(false);
@@ -20,13 +21,15 @@ const Tracks = (props) => {
         .then(items => setInfo(items));
         }, []);
 
-    useEffect(() => console.log(info), [info]);
-
+    // useEffect(() => console.log(info), [info]);
 
     return (
         <div className="Tracks my-8">
-            <h2 className="text-white text-4xl">Your Top Tracks</h2>
-
+            <h2 className="text-white text-4xl"><strong>Your Top Tracks</strong></h2>
+            <div className="trackBox">
+                {info.length !== [] ? <>{info.map((data, index) => <TrackBlock track={data} index={index + 1}/>)}</> : <></>}
+            </div>
+            
         </div>
     )
 }

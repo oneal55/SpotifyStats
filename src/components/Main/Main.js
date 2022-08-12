@@ -69,9 +69,6 @@ const Main = (props) => {
           />
         </div>
       )} */}
-      <div>
-        Hi
-      </div>
     </>
   );
 };

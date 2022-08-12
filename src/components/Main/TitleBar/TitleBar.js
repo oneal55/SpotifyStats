@@ -7,7 +7,7 @@ const TitleBar = (props) => {
     <>
     <div className="title-container">
         <h1>
-          <span className="text-white text-6xl text-bold title-main">
+          <span className="text-white text-6xl title-main">
             Spotify Stats
           </span>
           <span className="logOut">
