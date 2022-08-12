@@ -2,8 +2,6 @@ import "./TrackBlock.css"
 
 const TrackBlock = (props) => {
 
-    console.log(props.track);
-
     const openLink = () => {
         window.open(props.track.external_urls?.spotify);
     }
