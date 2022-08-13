@@ -8,7 +8,8 @@
     margin: 1%;
     font-size: 1.25vw;
     transition: font-size .5s, width .5s, height .5s;
-    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
     word-wrap:normal;
     border-radius: 3px;
     background-color: rgba(255, 255, 255, .1);
