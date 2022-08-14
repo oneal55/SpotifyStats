@@ -18,6 +18,8 @@
     padding: 3% 0%;
     background-color: #303030;
     border-radius: 10px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+}
+
+.artistLabel {
+    font-size: 4vmax;
 }

@@ -11,9 +11,9 @@ const Login = (props) => {
 
   return (
     <div className="container">
-        <h1 className="text-white text-6xl title"><strong>Spotify Stats</strong></h1>
+        <h1 className="text-white title"><strong>Spotify Stats</strong></h1>
         <div className="logIn">
-          <Button text="Login Here" styles="py-2 px-4" onClick={authenticate} />
+          <Button text="Login Here" styles="py-2 px-6" onClick={authenticate} />
         </div>
     </div>
     

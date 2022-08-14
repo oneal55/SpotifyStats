@@ -96,6 +96,7 @@ const Genres = (props) => {
     }
 
     const formatChartData = (data) => {
+        console.log(rawData);
         const smallerData = data.slice(0, 10);
         return {
             labels: smallerData.map(pair => format(Object.keys(pair)[0])),
@@ -117,6 +118,7 @@ const Genres = (props) => {
     }
 
      const options = {
+        maintainAspectRatio: true,
         responsive: true,
         plugins: {
           legend: {
@@ -151,7 +153,7 @@ const Genres = (props) => {
 
     return (
         <div className="Genres my-8">
-            <h2 className="text-white text-4xl"><b>Your Favorite Genres</b></h2>
+            <h2 className="text-white genreLabel"><b>Your Favorite Genres</b></h2>
             <div className="canvas-container">
                 {info != undefined ? <Bar data={formatChartData(info)} options={options}/>: <Spinner />}
             </div>

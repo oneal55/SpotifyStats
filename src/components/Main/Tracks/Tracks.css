@@ -16,6 +16,10 @@
 
 }
 
+.trackLabel {
+    font-size: 4vmax;
+}
+
 .trackBox {
     display: inline-block;
     margin: 3% 0%;

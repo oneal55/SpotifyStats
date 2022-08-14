@@ -15,7 +15,7 @@
       transform: translate(-50%, -50%);
     }
     to {
-      left: 80%;
+      left: 85%;
       top: 50%;
       transform: translate(-50%, -50%);
     }
@@ -44,6 +44,7 @@
     display: inline-block;
     left: 50%;
     top: 50%;
+    font-size: 6vmax;
     transform: translate(-50%, -50%);
     animation: loggedInSlideTop 1s ease-in-out;
   }
@@ -51,8 +52,9 @@
   .logOut{
     position: absolute;
     display: inline-block;
-    left: 80%;
+    left: 85%;
     top: 50%;
+    font-size: 2.25vmin;
     transform: translate(-50%, -50%);
     animation: loggedInSlideBottom 1s ease-in-out;
   }

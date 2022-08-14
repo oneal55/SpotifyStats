@@ -16,14 +16,16 @@ const Tracks = (props) => {
                 },
               }).then(response => response.json())
               .then(data => data["items"])
-              .then(items => setInfo(items));
+              .then(items => {
+                setInfo(items)
+            });
     }
 
     useEffect(() => search(), [props.time])
 
     return (
         <div className="Tracks my-8">
-            <h2 className="text-white text-4xl"><b>Your Top Tracks</b></h2>
+            <h2 className="text-white trackLabel"><b>Your Top Tracks</b></h2>
             <div className="trackBox">
                 {info.length !== 0 ? <>{info.map((data, index) => <TrackBlock track={data} key={index + 1} index={index + 1}/>)}</> : <Spinner />}
             </div>

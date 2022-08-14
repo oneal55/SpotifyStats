@@ -8,8 +8,13 @@
 .canvas-container {
     position: relative;
     display: inline-block;
-    width: 70%;
+    width: 60vmax;
+    height: 30vmax;
     margin: 5% 0% 0% 0%;
     background-color: #303030;
     border-radius: 10px;
+}
+
+.genreLabel {
+    font-size: 4vmax;
 }

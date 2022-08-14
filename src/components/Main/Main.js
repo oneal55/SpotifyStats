@@ -13,7 +13,7 @@ const Main = (props) => {
   return (
     <>
       <TitleBar user={props.accessToken} logOut={props.logOut} />
-      <h2 className="text-white text-4xl"><b>Currently On: {format(term)}</b></h2>
+      <h2 className="text-white term-duration"><b>Currently On: {format(term)}</b></h2>
       <div className="Terms">
       <Button text={'Short Term'} onClick={() => setTerm('short_term')} styles={'py-2 my-2 mx-4 px-4'}/>
       <Button text={'Medium Term'} onClick={() => setTerm('medium_term')} styles={'py-2 my-2 mx-4 px-4'}/>

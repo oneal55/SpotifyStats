@@ -1,10 +1,10 @@
 @keyframes loadInSlideTop {
   from {
-    transform: translateY(-0%);
+    transform: translate(-50%, 0%);
     top: 0%;
   }
   to {
-    transform: translateY(-100%);
+    transform: translate(-50%, -100%);
     top: 50%;
   }
 
@@ -15,31 +15,33 @@
     top: 100%;
   }
   to {
-    top: 50.5%;
+    top: 60%;
   }
 
 }
 
 .container {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 100%;
   height: 100%;
 }
 
 .title {
-  position: relative;
+  position: absolute;
   display: block;
-  transform: translateY(-100%);
+  transform: translate(-50%, -100%);
   top: 50%;
+  font-size: 6vmax;
   animation: loadInSlideTop 1s ease-in-out 0s;
 }
 
 .logIn {
   margin: auto;
-  position: relative;
+  position: absolute;
   display: block;
-  transform: translateY(-100%);
-  top: 50.5%;
+  transform: translate(-50%, -100%);
+  top: 60%;
+  font-size: 2.25vmin;
   animation: loadInSlideBottom 1s ease-in-out 0s;
 }
