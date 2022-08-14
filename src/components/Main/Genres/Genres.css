@@ -8,8 +8,8 @@
 .canvas-container {
     position: relative;
     display: inline-block;
-    width: 60vmax;
-    height: 30vmax;
+    width: 65vmax;
+    height: 35vmax;
     margin: 5% 0% 0% 0%;
     background-color: #303030;
     border-radius: 10px;
